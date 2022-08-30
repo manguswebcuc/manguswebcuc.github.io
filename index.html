@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <style>
+      html {
+        background-image: url("https://universidaddelacosta--seidordev--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Jpg&versionId=0683C000001ZhDk&operationContext=DELIVERY&contentId=05T3C000005QnJ4&page=0&d=/a/3C000000IAti/7p4KW52GtQ7UXCDLGVRfJ9yC4pLwg3lo5cKK4hcQ2Os&oid=00D3C00000053Vq&dpt=null&viewId=");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        font-family: "Segoe UI,Segoe WP,Tahoma,Arial,sans-serif";
+        text-transform: uppercase;
+      }
+      option{
+        text-transform: uppercase;
+      }
+      div {
+        font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans,
+          Helvetica Neue, Arial, sans-serif;
+      }
+
+      .contentForm {
+        display: flex;
+        justify-content: center;
+      }
+
+      .styleForm {
+        width: 100%;
+        max-width: 830px;
+        background-color: white;
+        padding: 50px;
+        margin-bottom: 30px;
+      }
+      .contentBaner{        
+        display: flex;
+        justify-content: center;
+      }
+      .baner {
+        background: #424242;
+        padding: 50px;
+        width: 100%;
+        max-width: 830px;
+        color: white;
+                
+      }
+      .titulo {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        font-size: 45px;
+       
+      }
+      .titulo > img {
+        width: 120px;
+      }
+      .titulo > div > p{
+        padding: 20px;
+        margin: 0 10px;
+      }
+
+      .input > input,
+      .input > select {
+        margin-top: 10px;
+        margin-left: 20px;
+
+        width: 80%;
+        padding: 4px 15px;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        justify-content: left;
+      }
+      .contetn-text{
+        padding: 4px 15px;
+        width: 80%;
+      }
+      .help-text {
+        color: red;
+      }
+      .test1{
+        font-size: 13px;
+      }
+      .input > input:focus,
+      .input > select:focus {
+        border: 3px solid #555;
+        background-color: #f1f1f1;
+      }
+      input[type="radio"] {
+        width: 15px;
+      }
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      input[type="checkbox"] {
+        width: 15px;
+      }
+
+      .input > label::after {
+        content: "\a";
+        white-space: pre;
+      }
+
+      .input > label::before {
+        content: "\a";
+        white-space: pre;
+      }
+      .leycheck{
+        padding: 0;
+        width: 20px;
+      }
+
+      .buttons {
+        height: 30px;
+        margin: 20px 0;
+        padding: 30px 0 80px;
+      }
+      .buttons > button, .buttons >input{
+        background-color: #424242;
+        border: none;
+        color: white;
+        padding: 8px 32px;        
+        font-size: 16px;
+        margin: 4px 2px; 
+        width: 200px;              
+      }
+
+      @media only screen and (max-width: 600px){
+        .baner{
+            padding: 15px;
+        }
+        .titulo {
+            font-size: 23px;           
+          }
+        .styleForm {
+            padding: 19px;
+        }
+      }
+
+
+    </style>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <section class="contentBaner">
+      <div class="baner">
+        <div class="titulo">
+          <img
+            src="https://cesaedu--preprod.sandbox.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=06803000002gDOq&operationContext=DELIVERY&contentId=05T03000005xFnG&page=0&d=/a/03000000DTxe/frHrC7MKi0oSJMij0CCvDG9U6n7rcxt4TR05vuEbJLI&oid=00D030000008lWD&dpt=null&viewId="
+            alt="logo"
+          />
+          <div >
+            <p>Universidad de la Costa Formulario de caracterización</p>
+          </div>
+        </div>
+        Apreciado aspirante, te invitamos a diligenciar el siguiente
+        formulario antes de tu entrevista de admisión. Recuerda ser
+        totalmente honesto y sincero en tus respuestas.<br><br> NOTA: La información
+        diligenciada en este formulario, no tiene influencia en el resultado
+        del proceso de admisión.
+      </div>
+    </section>
+    <div class="contentForm">
+      <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="styleForm">
+    
+        <input type=hidden name="orgid" value="00Df4000002ZjRP">
+        <input type=hidden name="retURL" value="https://www.cuc.edu.co/">
+      
+        
+        <section class="sectionForm sec1" id="sec1">
+          <h2>INFORMACIÓN PERSONAL</h2>
+          <div class="input">
+            <label for="name">1.ESCRIBE TUS DOS NOMBRES</label>
+            <input
+              id="name"
+              maxlength="80"
+              name="name"
+              size="20"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="LastName">2.ESCRIBE TUS DOS APELLIDOS</label>
+            <input
+              id="LastName"
+              maxlength="80"
+              name="LastName"
+              size="20"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>          
+          <div class="input">
+            <label for="TDOC">3.TIPO DE DOCUMENTO</label>
+            <input
+              type="radio"
+              onclick="getField(this)"
+              type="checkbox"
+              name="TDOC"
+              id="TI"
+              value="TI"
+            />TARJETA DE IDENTIDAD<br />
+            <input
+              type="radio"
+              onclick="getField(this)"
+              type="checkbox"
+              name="TDOC"
+              id="CD"
+              value="CD"
+            />CEDULA<br />
+            <input
+              type="radio"
+              onclick="getField(this)"
+              type="checkbox"
+              name="TDOC"
+              id="PA"
+              value="PA"
+            />PASAPORTE<br />
+            <input
+              type="radio"
+              onclick="getField(this)"
+              type="checkbox"
+              name="TDOC"
+              id="CD"
+              value="CD"
+            />CEDULA EXTRANJERIA
+          </div>
+          <div class="input">
+            <label for="NumeroDocumento"
+              >4.ESCRIBE TU NÚMERO DE DOCUMENTO</label
+            ><input
+              id="NumeroDocumento"              
+              name="NumeroDocumento"                            
+              type = "number"
+              maxlength = "21"
+              onchange="getField(this)"
+            />
+            <br>
+            <div class="contetn-text">
+              <span class="help-text test1">Por favor verifica este campo, es indispensable en tu proceso</span>
+            </div>
+            
+          </div>
+          <div class="input">
+            <label for="Genero">5.SELECCIONA TU GENERO</label>
+            <select
+              name="Genero"
+              id="Genero"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+            
+              <option value=""disabled selected hidden></option>
+              <option value="Femenino">FEMENINO</option>
+              <option value="Masculino">MASCULINO</option>
+              <option value="Transgénero">TRANSGÉNERO</option>
+              <option value="Intersexual">INTERSEXUAL</option>
+              <option value="No binario">NO BINARIO</option>
+              <option value="Sin género">SIN GÉNERO</option>
+              <option value="No estoy seguro">NO ESTOY SEGURO</option>
+              <option value="Prefiero no decir">PREFIERO NO DECIR</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="Actividades_Unicosta"
+              >6.¿CON CUÁL DE LAS SIGUIENTES ACTIVIDADES UNICOSTA TUVISTE ALGUNA
+              INTERACCIÓN?</label
+            >
+            <input
+              class="conformarPM"              
+              type="checkbox"
+              name="Cursé un preuniversitario"                            
+              value="Cursé un preuniversitario"
+              onclick="conformarPM(this)"
+            />CURSÉ UN PREUNIVERSITARIO<br/>
+            <input
+              class="conformarPM"              
+              type="checkbox"                            
+              value="Visité la u y viví una experiencia"
+              name="Visité la u y viví una experiencia"
+              onclick="conformarPM(this)"
+            />VISITÉ LA U Y VIVÍ UNA EXPERIENCIA<br/>
+            <input
+              class="conformarPM"              
+              type="checkbox"                            
+              value="La u visitó mi colegio"
+              name="La u visitó mi colegio"
+              onclick="conformarPM(this)"
+            />LA U VISITÓ MI COLEGIO<br/>
+            <input
+              class="conformarPM"              
+              type="checkbox"                            
+              value="Un amigo o familiar me recomendó la u"
+              name="Un amigo o familiar me recomendó la u"
+              onclick="conformarPM(this)"
+            />UN AMIGO O FAMILIAR ME RECOMENDÓ LA U<br/>
+            <input
+              class="conformarPM"              
+              type="checkbox"                            
+              value="Vi la u en redes sociales"
+              name="Vi la u en redes sociales"
+              onclick="conformarPM(this)"
+            />VI LA U EN REDES SOCIALES.<br/>
+            <input
+              class="conformarPM"              
+              type="checkbox"                            
+              value="Navegacion pagina web / redes sociales"
+              name="Navegacion pagina web / redes sociales"
+              onclick="conformarPM(this)"
+            />NAVEGACIÓN PAGINA WEB / REDES SOCIALES<br/>
+            <input
+              class="conformarPM"              
+              type="checkbox"                            
+              value="Conocí la u en una feria"
+              name="Conocí la u en una feria"
+              onclick="conformarPM(this)"
+            />CONOCÍ LA U EN UNA FERIA<br/>            
+          </div>
+          <div class="input">
+            <label for="ELIGIERA_UNICOSTA"
+              >7.DE LAS ACTIVIDADES SELECCIONADAS EN LA PREGUNTA ANTERIOR. ¿CUÁL
+              DE ELLAS HIZO QUE ELIGIERA A UNICOSTA PARA SU FORMACIÓN
+              PROFESIONAL?</label
+            >
+            <select
+              name="ELIGIERA_UNICOSTA"
+              id="ELIGIERA_UNICOSTA"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Cursé un preuniversitario">CURSÉ UN PREUNIVERSITARIO</option>
+              <option value="Visité la u y viví una experiencia">
+                VISITÉ LA U Y VIVÍ UNA EXPERIENCIA
+              </option>
+              <option value="La u visitó mi colegio">LA U VISITÓ MI COLEGIO</option>
+              <option value="Un amigo o familiar me recomendó la u">
+                UN AMIGO O FAMILIAR ME RECOMENDÓ LA U
+              </option>
+              <option value="Vi la u en redes sociales">VI LA U EN REDES SOCIALES</option>
+              <option value="Navegacion pagina web / redes sociales">
+                NAVEGACIÓN PAGINA WEB / REDES SOCIALES
+              </option>
+              <option value="Conocí la u en una feria">
+                CONOCÍ LA U EN UNA FERIA
+              </option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="RED_SOCIAL"
+              >8.SELECCIONA LA RED SOCIAL QUE MÁS UTILIZAS</label
+            >
+            <select
+              name="RED_SOCIAL"
+              id="RED_SOCIAL"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Instagram">INSTAGRAM</option>
+              <option value="Facebook">FACEBOOK</option>
+              <option value="Twitter">TWITTER</option>
+              <option value="Linkedin">LINKEDIN</option>
+              <option value="Tiktok">TIKTOK</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="TIPO_COLEGIO"
+              >9.TIPO DE COLEGIO DONDE SE GRADUÓ DE 11°</label
+            >
+            <select
+              name="TIPO_COLEGIO"
+              id="TIPO_COLEGIO"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Público">PÚBLICO</option>
+              <option value="Privado">PRIVADO</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="DEPARTAMENTO"
+              >10.SELECCIONE SU DEPARTAMENTO DE NACIMIENTO</label
+            >
+            <select
+              name="DEPARTAMENTO"
+              id="DEPARTAMENTO"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Atlantico">ATLÁNTICO</option>
+              <option value="Bolivar">BOLIVAR</option>
+              <option value="Magdalena">MAGDALENA</option>
+              <option value="La Guajira">LA GUAJIRA</option>
+              <option value="Cesar">CESAR</option>
+              <option value="Cordoba">CÓRDOBA</option>
+              <option value="Sucre">SUCRE</option>
+              <option value="Otras">OTROS</option>
+            </select>
+          </div>
+          <div class="input DEPARTAMENTO">
+            <input
+              onchange="getField(this)"
+              id="DEPARTAMENTOF"
+              maxlength="80"
+              name="DEPARTAMENTO"
+              type="text"
+              hidden
+            />
+          </div>
+
+          <div class="input">
+            <label for="CIUDAD"
+              >11.ESCRIBA EL MUNICIPIO O CIUDAD DONDE USTED NACIÓ</label
+            ><input
+              onchange="getField(this)"
+              id="MUNICIPIO_NACIO"
+              maxlength="80"
+              name="MUNICIPIO_NACIO"
+              type="text"
+            />
+          </div>
+          <div class="input">
+            <label for="COLEGIO_G"
+              >12.EN CUAL DE LOS DEPARTAMENTOS DE LA REGIÓN CARIBE SE UBICA EL
+              COLEGIO DONDE TE GRADUASTE DE BACHILLER</label
+            >
+            <select
+              name="COLEGIO_G"
+              id="COLEGIO_G"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Atlantico">ATLÁNTICO</option>
+              <option value="Bolivar">BOLIVAR</option>
+              <option value="Magdalena">MAGDALENA</option>
+              <option value="La Guajira">LA GUAJIRA</option>
+              <option value="Cesar">CESAR</option>
+              <option value="Cordoba">CÓRDOBA</option>
+              <option value="Sucre">SUCRE</option>
+              <option value="Otras">OTROS</option>
+            </select>
+          </div>
+          <div class="input ">
+            <input
+              onchange="getField(this)"
+              id="COLEGIO_GF"
+              maxlength="80"
+              name="COLEGIO_G"
+              type="text"
+              hidden
+            />
+          </div>
+          <div class="input">
+            <label for="MUNICIPIO_CIUDAD"
+              >13.ESCRIBA EL MUNICIPIO O CIUDAD DONDE SE UBICA EL COLEGIO EN EL
+              QUE USTED SE GRADÚO DE BACHILLER</label
+            ><input
+              id="MUNICIPIO_CIUDAD"
+              maxlength="40"
+              name="MUNICIPIO_CIUDAD"
+              size="20"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input" id="NextInfo">            
+            <div class="contetn-text">
+              <br><br>
+              <span class="help-text">Por favor diligencie todos los campos para continuar</span>
+            </div>
+            
+          </div>
+        </section>
+        <section class="sectionForm sec2" id="sec2" hidden>
+          <h2>INFORMACIÓN FAMILIAR</h2>
+          <div class="input">
+            <label for="PERSONAS_CONTIGO"
+              >14.¿CUANTAS PERSONAS VIVEN CONTIGO (INCLUYENDOTE)? - ESCRIBELO EN
+              NÚMEROS</label
+            ><input
+              id="PERSONAS_CONTIGO"
+              name="PERSONAS_CONTIGO"
+              type="number"
+              maxlength="2"
+             
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="NUCLEO_FAMILIAR"
+              >15.¿CUANTAS PERSONAS DE TU NUCLEO FAMILIAR APORTAN
+              ECONOMICAMENTE?</label
+            ><input
+              id="NUCLEO_FAMILIAR"
+              name="NUCLEO_FAMILIAR"
+              type="number"
+              maxlength="2"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="PROMEDIO_INGRESO"
+              >16.¿CUANTO ES EL PROMEDIO DE INGRESO FAMILIAR? (EN SALARIOS
+              MINIMOS)</label
+            ><select
+              name="PROMEDIO_INGRESO"
+              id="PROMEDIO_INGRESO"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value="" disabled selected hidden></option>
+              <option value="Entre 0 - 1">ENTRE 0-1</option>
+              <option value="Entre 1 - 2">ENTRE 1-2</option>
+              <option value="Entre 2 - 5">ENTRE 2-5</option>
+              <option value="Entre 5 - 10">ENTRE 5-10</option>
+              <option value="Más de 10">MÁS DE 10</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="NUMERO_HERMANOS"
+              >17.NÚMERO DE HERMANOS (CONTANDOSE USTED)</label
+            ><input
+              id="NUMERO_HERMANOS"
+              name="NUMERO_HERMANOS"
+              type="number"
+              maxlength="2"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input NUMERO_HERMANOSDependiente">
+            <label for="POSICION">18.POSICIÓN ENTRE HERMANOS</label
+            ><input
+              id="POSICION"
+              name="POSICION"
+              type="number"
+              maxlength="2"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input NUMERO_HERMANOSDependiente">
+            <label for="HERMANOS_ESTUDIOS"
+              >19.NÚMERO DE HERMANOS CON ESTUDIOS SUPERIORES (UNIVERSIDAD):</label
+            ><input
+              id="HERMANOS_ESTUDIOS"              
+              name="HERMANOS_ESTUDIOS"             
+              type="number"
+              maxlength="2"
+              onchange="getField(this)"
+            />
+          </div>          
+          <div class="input ">
+            <label for="MADRE_SOLTERA"
+              >20.¿ES USTED PADRE SOLTERO O MADRE SOLTERA?</label
+            ><select
+              name="MADRE_SOLTERA"
+              id="MADRE_SOLTERA"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Sí">SI</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="VIVIENDA">21.¿RESIDE EN VIVIENDA PROPIA?</label>
+            <input
+              type="radio"
+              name="VIVIENDA"
+              id="VIVIENDA_SI"
+              onchange="getField(this)"
+              value="Sí"
+            />Si<br />
+            <input
+              type="radio"
+              name="VIVIENDA"
+              id="VIVIENDA_No"
+              onchange="getField(this)"
+              value="No"
+            />No
+          </div>
+          <div class="input">
+            <label for="NOMBRE_PADRE">22.NOMBRE DE SU PADRE O MADRE:</label
+            ><input
+              id="NOMBRE_PADRE"
+              name="NOMBRE_PADRE"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="CELULAR_P_M"
+              >23.CELULAR DEL PADRE O MADRE MENCIONADO ANTERIORMENTE:</label
+            ><input
+              id="CELULAR_P_M"
+              name="CELULAR_P_M"
+              type="number"
+              maxlength="15"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="EDUCATIVO_P_M"
+              >24.NIVEL EDUCATIVO DEL PADRE O MADRE MENCIONANDO
+              ANTERIORMENTE:</label
+            ><select
+              name="EDUCATIVO_P_M"
+              id="EDUCATIVO_P_M"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Primaria">PRIMARIO</option>
+              <option value="Secundaria">SECUNDARIA</option>
+              <option value="Técnico-tecnólogo">TÉCNICO - TECNOLOGO</option>
+              <option value="Profesional Universitario">
+                PROFESIONAL UNIVERSITARIO
+              </option>
+              <option value="Posgrado">POSGRADO</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="OCUPACION_P_M"
+              >25.OCUPACIÓN DEL PADRE O MADRE MENCIONADO ANTERIORMENTE:</label
+            ><select
+              name="OCUPACION_P_M"
+              id="OCUPACION_P_M"
+              onchange="getField(this)"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Estudia">ESTUDIA</option>
+              <option value="Labora">LABORA</option>
+              <option value="Ama de casa">AMA DE CASA</option>
+              <option value="Pensionado">PENSIONADO</option>
+              <option value="Desempleado">DESEMPLEADO</option>
+              <option value="Independiente">INDEPENDIENTE</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="NOMBRE_ACUDIENTE">26.NOMBRE DE SU ACUDIENTE:</label
+            ><input
+              name="NOMBRE_ACUDIENTE"
+              id="NOMBRE_ACUDIENTE"
+              onchange="getField(this)"
+              maxlength="80"
+            />
+          </div>
+          <div class="input">
+            <label for="CELULAR_ACUDIENTE">27.CELULAR DEL ACUDIENTE:</label
+            ><input
+              name="CELULAR_ACUDIENTE"
+              id="CELULAR_ACUDIENTE"
+              onchange="getField(this)"
+              maxlength="15"
+              type="number"
+            />
+          </div>
+          <div class="input">
+            <label for="EDUCATIVO_A"
+              >28.NIVEL EDUCATIVO DEL ACUDIENTE MENCIONADO</label
+            ><select
+              name="EDUCATIVO_A"
+              id="EDUCATIVO_A"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+            <option value=""disabled selected hidden></option>
+            <option value="Primaria">PRIMARIO</option>
+            <option value="Secundaria">SECUNDARIA</option>
+            <option value="Técnico-tecnólogo">TÉCNICO - TECNOLOGO</option>
+            <option value="Profesional Universitario">
+              PROFESIONAL UNIVERSITARIO
+            </option>
+            <option value="Posgrado">POSGRADO</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="OCUPACION_P_M">29.OCUPACIÓN DEL ACUDIENTE</label
+            ><select
+              name="OCUPACION_AC"
+              id="OCUPACION_AC"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Estudia">ESTUDIA</option>
+              <option value="Labora">LABORA</option>
+              <option value="Ama de casa">AMA DE CASA</option>
+              <option value="Pensionado">PENSIONADO</option>
+              <option value="Desempleado">DESEMPLEADO</option>
+              <option value="Independiente">INDEPENDIENTE</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="PARENTESCO_ACUDIENTE:"
+              >30.PARENTESCO DEL ACUDIENTE:</label
+            ><select
+              name="PARENTESCO_ACUDIENTE"
+              id="PARENTESCO_ACUDIENTE"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Padre">PADRE/MADRE</option>
+              <option value="Hermano">HERMANO</option>
+              <option value="Primo">PRIMO</option>
+              <option value="Tio">TIO</option>
+              <option value="Abuelo">ABUELO</option>
+              <option value="Amigo">AMIGO</option>
+              <option value="Pareja	">PAREJA</option>
+              
+            </select>
+          </div>
+        </section>
+        <section class="sectionForm sec3" id="sec3" hidden>
+            <h2>CONDICIONES DE ESTUDIO</h2>
+          <div class="input">
+            <label for="BECA">31.¿ESTUDIARÁ USTED CON BECA Y/O CRÉDITO?</label
+            ><input
+            type="radio"
+            name="BECA"
+            id="BECA_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="BECA"
+            id="BECA_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input BECADependiente">
+            <label for="NOMBRE_B_C">32.¿CUÁL BECA O CRÉDITO?</label
+            ><input
+              id="NOMBRE_B_C"
+              name="NOMBRE_B_C"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="COMPUTADOR">33.¿USTED POSEE COMPUTADOR?</label
+            ><input
+            type="radio"
+            name="COMPUTADOR"
+            id="COMPUTADOR_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="COMPUTADOR"
+            id="COMPUTADOR_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input">
+            <label for="CELULAR_INTELIGENTE"
+              >34¿USTED POSEE CELULAR INTELIGENTE?</label
+            ><input
+            type="radio"
+            name="CELULAR_INTELIGENTE"
+            id="CELULAR_INTELIGENTE_SI"
+            onchange="getField(this)"
+            value="Si"
+          />Si<br />
+          <input
+            type="radio"
+            name="CELULAR_INTELIGENTE"
+            id="CELULAR_INTELIGENTE_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input">
+            <label for="ACCESO_INTERNET"
+              >35.¿USTED TIENE ACCESO A INTERNET EN SU VIVIENDA?</label
+            ><input
+            type="radio"
+            name="ACCESO_INTERNET"
+            id="ACCESO_INTERNET_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="ACCESO_INTERNET"
+            id="ACCESO_INTERNET_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input">
+            <label for="PLAN_DATOS">36.¿USTED TIENE PLAN DE DATOS?</label
+            ><input
+            type="radio"
+            name="PLAN_DATOS"
+            id="PLAN_DATOS_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="PLAN_DATOS"
+            id="PLAN_DATOS_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+            </select>
+          </div>
+        </section>
+        <section class="sectionForm sec4" id="sec4" hidden>
+          <h2>CONDICIONES DE SALUD</h2>
+          <div class="input">
+            <label for="Eps">37.¿Posee EPS?</label
+            ><input
+            type="radio"
+            name="Eps_si"
+            id="Eps_SI"
+            onchange="getField(this)"
+            value="Si"
+          />Si<br />
+          <input
+            type="radio"
+            name="Eps_si"
+            id="Eps_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input Eps_siDependiente">
+            <label for="Eps">38.¿CUÁL ES SU EPS?</label
+            ><select
+              name="Eps"
+              id="Eps"
+              onchange="getField(this)"
+              maxlength="80"
+            >
+              <option value=""disabled selected hidden></option>
+              <option value="Cajacopi Eps">Cajacopi Eps</option>
+              <option value="Sanitas Eps">Sanitas Eps</option>
+              <option value="Compensar Eps">Compensar Eps</option>
+              <option value="Coomeva Eps">Coomeva Eps</option>
+              <option value="Coosalud">Coosalud</option>
+              <option value="Sura Eps">Sura Eps</option>
+              <option value="Famisanar">Famisanar</option>
+              <option value="Medimas Eps">Medimas Eps</option>
+              <option value="Nueva Eps">Nueva Eps</option>
+              <option value="Salud Total Eps">Salud Total Eps</option>
+              <option value="Cafam Eps">Cafam Eps</option>
+              <option value="Emssanar Eps">Emssanar Eps</option>
+              <option value="Colsubsidio Eps">Colsubsidio Eps</option>
+              <option value="Asmet salud Eps">Asmet salud Eps</option>
+              <option value="Asocación mutual barrios">
+                Asocación mutual barrios unidos de quibdó AMBUQ Eps
+              </option>
+              <option value="Capresoca Eps">Capresoca Eps</option>
+              <option value="Ecoopsos Eps SAS">Ecoopsos Eps SAS</option>
+              <option value="Fuerzas militares">Fuerzas militares</option>
+              <option value="Policia Naciona">Policia Naciona</option>
+              <option value="Ecopetrol">Ecopetrol</option>
+              <option value="Magisterio">Magisterio</option>
+              <option value="Servicio Occidental de salud">
+                Servicio Occidental de salud
+              </option>
+              <option value="Cruz Blanca Eps">Cruz Blanca Eps</option>              
+              <option value="Aliansalud">Aliansalud</option>
+              <option value="Mutual ser">Mutual ser</option>
+              <option value="Ninguna">Ninguna</option>
+              <option value="Otras">Otras</option>
+            </select>
+          </div>
+          <div class="input Eps_siDependiente">
+            <input
+              onchange="getField(this)"
+              id="EpsF"
+              maxlength="80"
+              name="Eps"
+              type="text"
+              hidden
+            />
+          </div>
+          <div class="input">
+            <label for="EMBARAZO"
+              >39.¿ESTÁ USTED EN CONDICIÓN DE EMBARAZO?</label
+            ><input
+            type="radio"
+            name="EMBARAZO_SI"
+            id="EMBARAZO_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="EMBARAZO_SI"
+            id="EMBARAZO_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input">
+            <label for="LENTES_RECETADOS">40.¿USTED USA LENTES RECETADOS?</label
+            ><input
+            type="radio"
+            name="LENTES_RECETADOS"
+            id="LENTES_RECETADOS_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="LENTES_RECETADOS"
+            id="LENTES_RECETADOS_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input LENTES_RECETADOSDependiente">
+            <label for="USO_LENTES">41.¿MOTIVO DEL USO DE LENTES?</label
+            ><input
+              id="USO_LENTES"
+              maxlength="40"
+              name="USO_LENTES"
+              size="20"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="DIAGNOSTICO_MEDICO_ESPECIAL"
+              >42.¿USTED TIENE ALGÚN DIAGNOSTICO MÉDICO DE ENFERMAD QUE REQUIERA
+              CUIDADO ESPECIAL?</label
+            ><input
+            type="radio"
+            name="DIAGNOSTICO_MEDICO_ESPECIAL"
+            id="DIAGNOSTICO_MEDICO_ESPECIAL_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="DIAGNOSTICO_MEDICO_ESPECIAL"
+            id="DIAGNOSTICO_MEDICO_ESPECIAL_NO"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input DIAGNOSTICO_MEDICO_ESPECIALDependiente">
+            <label for="DIAGNOSTICO">43.¿CUÁL DIAGNOSTICO MÉDICO? </label
+            ><input
+              id="DIAGNOSTICO"
+              maxlength="40"
+              name="DIAGNOSTICO"
+              size="20"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+        </section>
+        <section class="sectionForm sec5" id="sec5" hidden>
+          <h2>INFORMACIÓN LABORAL</h2>
+          <div class="input">
+            <label for="TRABAJA">44.¿TRABAJA MIENTRAS ESTUDIA?</label
+            ><input
+            type="radio"
+            name="TRABAJA"
+            id="TRABAJA_SI"
+            onchange="getField(this)"
+            value="Sí"
+          />Si<br />
+          <input
+            type="radio"
+            name="TRABAJA"
+            id="TRABAJA_No"
+            onchange="getField(this)"
+            value="No"
+          />No
+          </div>
+          <div class="input TRABAJADependiente">
+            <label for="NOMBRE_EMPRESA"
+              >45.NOMBRE DE LA EMPRESA DONDE TRABAJA:</label
+            ><input
+              id="NOMBRE_EMPRESA"
+              name="NOMBRE_EMPRESA"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input TRABAJADependiente">
+            <label for="CARGO_ACTUAL">46.CARGO ACTUAL:</label>
+            <input
+              id="CARGO_ACTUAL"
+              name="CARGO_ACTUAL"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input TRABAJADependiente">
+            <label for="DIRECCIÓN_EMPRESA"
+              >47.DIRECCIÓN DE LA EMPRESA DONDE TRABAJA:</label
+            ><input
+              id="DIRECCIÓN_EMPRESA"
+              name="DIRECCIÓN_EMPRESA"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input TRABAJADependiente">
+            <label for="TELEFONO_EMPRESA "
+              >48.TELEFONO DE LA EMPRESA DONDE TRABAJA:</label
+            ><input
+              id="TELEFONO_EMPRESA"
+              maxlength="40"
+              name="TELEFONO_EMPRESA"
+              size="20"
+              type="text"
+              onchange="getField(this)"
+            />
+          </div>
+          <div class="input">
+            <label for="emailForm">
+              49.Por favor confirme su correo electronico</label
+            >
+
+            <input
+              class="input"
+              onchange="varificarEmail(this)"                           
+              type="text"
+              name="emailForm"
+              id="emailForm"                
+
+            />
+                      
+          </div>
+          <div class="input">
+            <label for="ley">
+              50.Declaro y acepto que conozco el reglamento estudiantil de la
+              universidad de la Costa (ACUERDO No. 1618 30 DE NOVIEMBRE DE 2020,
+              ART.37), donde se establece que, si en el proceso de admisión se
+              identifica que obtuve en la prueba saber 11 un puntaje por debajo
+              de la media nacional (50 puntos) en las competencias de
+              razonamiento cuantitativo y/o Lectura crítica , debo realizar un
+              plan de acompañamiento académico según corresponda para poder ser
+              admitido y además cursarlo y aprobarlo en el primer semestre con
+              plazo máximo hasta el 2 semestre, o de lo contrario podría quedar
+              por fuera del programa que esté cursando.</label
+            >
+
+            <input
+              class="leycheck"
+              onclick="checkLey(this)"
+              type="checkbox"
+              name="ley"
+              id="ley"  
+              value=false
+
+            />
+              Si            
+          </div>
+          
+        </section>
+
+        <!--form_json:-->
+        <textarea  id="00N5G00000VwPla" name="00N5G00000VwPla" rows="3" type="text" wrap="soft" hidden></textarea>
+        <!--Web-to-contact:-->
+        <input
+          id="00N3C000006Cwcz"
+          name="00N3C000006Cwcz"
+          type="checkbox"
+          hidden
+        />
+        <div class="buttons">
+          <button
+            type="button"
+            id="back"
+            value="back"
+            onclick="paginado(this)"
+            hidden
+          >
+            Atras
+          </button>
+          <button
+            type="button"
+            id="next"
+            value="next"                 
+          >
+            Siguiente
+          </button>
+          
+          <input type="submit"   name="submit" id="submit" hidden />
+        </div>
+      </form>
+    </div>
+    <script>
+    let dataForm = {"ley":"No","email":"","TRABAJA":"","emailForm": ""};   
+ 
+
+  
+
+      let multiS ={};
+
+      let pages = [
+        document.getElementById("sec1"),
+        document.getElementById("sec2"),
+        document.getElementById("sec3"),
+        document.getElementById("sec4"),
+        document.getElementById("sec5"),
+      ];
+      
+      let page = 0;
+      let field = 0;
+      let nDependientes = 1;
+
+      let checks = document.querySelectorAll(".checkDocument");
+
+      let inp = document.querySelectorAll("input[type='number']");
+        [...inp].forEach((i) => {
+          i.setAttribute("oninput", "javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);");  
+        });
+
+      
+      /// Agregar valor de los campos en el mapa dataForm
+      function getField(even) {        
+        dataForm[even.name] = even.value;
+        document.getElementById("00N3C000006Cwcz").click();
+        document.getElementById("00N5G00000VwPla").value = JSON.stringify(dataForm);
+        contadorbotones();
+        /// Habilita el campo de documento para recibir letras cuando es seleccionado documento
+          //Verirficacion de tipo de documento Pa es igual a Pasaporte
+        if(dataForm.TDOC == 'PA'){
+            document.getElementById('NumeroDocumento').type = 'text';
+        }else{
+            document.getElementById('NumeroDocumento').type = 'number';
+        }
+        habilitarCamposTipoOtro(even.name);
+        if(even.name == 'BECA'||even.name == 'Eps_si'||even.name == 'LENTES_RECETADOS'||even.name == 'DIAGNOSTICO_MEDICO_ESPECIAL'||even.name == 'TRABAJA' ||even.name == 'NUMERO_HERMANOS'){
+          camposDependientes(even);
+        }
+        
+        console.log(dataForm);
+        console.log(field);
+        console.log(37  + nDependientes)
+      }
+      ///Habilita un nuevo campo si es elegida la opcion otros en el campo 10/12/37
+      function habilitarCamposTipoOtro(eve){
+        let dep = ["Atlantico","Bolivar","Magdalena","La Guajira","Cesar","Cordoba","Sucre","Otras","Cajacopi Eps","Sanitas Eps","Compensar Eps","Coomeva Eps","Coosalud","Sura Eps","Famisanar","Medimas Eps","Nueva Eps","Salud Total Eps","Cafam Eps","Emssanar Eps","Colsubsidio Eps","Asmet salud Eps","Asocación mutual barrios","Capresoca Eps","Ecoopsos Eps SAS","Fuerzas militares","Policia Naciona","Ecopetrol","Magisterio","Servicio Occidental de salud","Cruz Blanca Eps","Ninguna","Aliansalud","Mutual ser"];
+        
+        let evef = eve+"F";
+        if(eve == "DEPARTAMENTO" || eve ==  "COLEGIO_G" ||eve ==  "Eps"){
+          if(dataForm[eve] == 'Otras'){
+            document.getElementById(evef).hidden = false;
+          } else{
+            let exite = false;
+            dep.map((e)=>{
+              if(e == dataForm[eve]){
+                exite = true;
+              }
+            })
+            if(exite == true){
+              document.getElementById(evef).hidden = true;
+            }else{
+              document.getElementById(evef).hidden = false;
+            }
+           
+          }
+
+        }
+        
+      }
+      //Habilitar campos dependientes
+      function camposDependientes(eve){
+        let camposD = eve.name + 'Dependiente'
+        let elementos = document.querySelectorAll(`.${camposD}`);
+
+        /*/Valida si el campo tiene un numero superior a 0(Pregunta 16)
+        if(eve.name == 'NUMERO_HERMANOS'){
+          [...elementos].forEach((i,v)=>{
+            if(eve.value =='0' ){
+              i.hidden = true;
+            }else{
+              i.hidden = false;
+            }
+          });
+        } */
+        
+          ///// Es una pregunta de tipo si o no 
+          [...elementos].forEach((i,v)=>{
+            if(eve.value =='No' ){
+              i.hidden = true;
+              nDependientes -= 1;
+            }else{
+              i.hidden = false;
+              nDependientes += 1;
+            }
+          });
+      
+
+      }
+      //Cuanenta el número de campos del mapa tenendo 
+      function contadorbotones() {
+        var contadorCampos = 0;
+
+        for (const [key, value] of Object.entries(dataForm)) {
+          if (value != "") {
+            contadorCampos += 1;
+          }
+        }
+        field = contadorCampos;
+        habilitarBotones();
+      }
+      //La activacion de botones depende de el numero de campos diligenciados
+      function habilitarBotones() {
+        let submit = document.getElementById("submit");
+       
+        if ( dataForm.TRABAJA != "" && page == 4 &&  dataForm.emailForm != '' ) {
+          submit.hidden = false;
+        } else {
+          submit.hidden = true;
+        }
+
+        let back = document.getElementById("back");
+        if (page == 0) {
+          back.hidden = true;
+        } else {
+          back.hidden = false;
+        }
+        let next = document.getElementById("next");
+        let info = document.getElementById("NextInfo");
+        if (page == 4 ) {
+          next.hidden = true;
+          info.hidden = false;
+        } else {
+          next.hidden = false;
+          info.hidden = true;
+        }
+        
+      }
+      //Paginado 
+      function paginado(eve) {
+        if (eve.value == "next") {          
+          page += 1;
+        } else {
+          page -= 1;
+        }
+
+        pages.map((p, i) => {
+          if (i == page) {
+            p.hidden = false;
+          } else {
+            p.hidden = true;
+          }
+        });
+        habilitarBotones();
+      }
+      //Confoma los valores para la pocklis(Multiselec) de la pregunta 6
+      function conformarPM(eve){
+        let confArray='';
+        const mult = document.querySelectorAll(".conformarPM");
+        [...mult].map((i) =>{         
+          if(i.checked == true){            
+            confArray +=i.value + ";";
+          }
+        });
+        dataForm['multiPL'] = confArray.slice(0,-1);        
+      }
+      //Cambia el valor de la pregunta 49 
+      function checkLey(eve){
+        
+        if(dataForm[eve.name] === 'No'){
+          dataForm[eve.name] = 'Sí';
+        } else{
+          dataForm[eve.name] = 'No';
+        }  
+            
+      }
+      //Verificar email
+      function varificarEmail(even){
+       
+        
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(even.value))
+        {
+          dataForm[even.name] = even.value;   
+          habilitarBotones();
+          onFocusF();
+          document.getElementById("00N5G00000VwPla").value = JSON.stringify(dataForm);
+          return       
+        }
+          alert("Por favor ingrese una dirección de correo electrono (email)!")
+          even.value = '';                    
+          
+        
+      }
+      
+      function onFocusF(){
+        dataForm.email = dataForm.emailForm;
+        document.getElementById("00N5G00000VwPla").value = JSON.stringify(dataForm);
+        let submit = document.getElementById("submit");
+        submit.hidden = false;
+        document.getElementById("submit").addEventListener("click", (event) => {
+          
+          if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(dataForm.email) ){                        
+            if(dataForm.TRABAJA != ""){
+              alert("Gracias por diligenciar el formulario");            
+              return  
+            }
+            alert("Es necesario llenar todos los campos para continuar");
+            event.preventDefault();         
+            return      
+          }                             
+          alert("Por favor ingrese una dirección de correo electrono (email)!")
+          event.preventDefault();
+        }, false);
+        
+         
+      }
+      document.getElementById("next").addEventListener("click", (event) => {
+          let valu = document.getElementById("next");
+          
+          if(page == 3){
+            
+            if(field < ( 35  + nDependientes )){
+              
+              alert("Es necesario llenar todos los campos para continuar")
+              event.preventDefault()
+            }else{
+              page += 1;
+            }
+          }
+          if(page == 2){
+                    
+
+            if(field < (33 + nDependientes)){
+              
+              alert("Es necesario llenar todos los campos para continuar")
+              event.preventDefault()
+            }else{
+              page += 1;
+            }
+          }
+
+          if(page == 1){
+            
+            if(field < 31){
+              
+              alert("Es necesario llenar todos los campos para continuar")
+              event.preventDefault()
+            }else{
+              page += 1;
+            }
+          }
+          
+           if(page == 0){
+          
+            if(field < 14){          
+              alert("Es necesario llenar todos los campos para continuar")
+              event.preventDefault()
+            }else{
+              page += 1;
+            }
+          }
+
+
+
+          
+
+
+        pages.map((p, i) => {
+          if (i == page) {
+            p.hidden = false;
+          } else {
+            p.hidden = true;
+          }
+        });
+        habilitarBotones();
+      }, false);   
+    
+
+    </script>
+  </body>
+</html>
