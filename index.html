@@ -1177,7 +1177,8 @@
                 <button
                 type="button"
                 id="next"
-                value="next"                 
+                value="next"
+                onclick="scrollUp(this)"               
                 >
                 Siguiente
                 </button>
@@ -1434,6 +1435,7 @@
            }
            //Paginado 
            function paginado(eve) {
+            scrollUp(eve);
              if (eve.value == "next") {          
                page += 1;
              } else {
@@ -1447,9 +1449,21 @@
                  p.hidden = true;
                }
              });
+            
              habilitarBotones();
+             
+
            }
-           //Confoma los valores para la pocklis(Multiselec) de la pregunta 6
+          ////// Scroll up////
+          function scrollUp(Enter){           
+             window.scrollTo({
+              top: 100,
+              left: 100,
+              behavior: 'smooth'
+            });
+          }
+
+          //Confoma los valores para la pocklis(Multiselec) de la pregunta 6
            function conformarPM(eve){
              let confArray='';
              const mult = document.querySelectorAll(".conformarPM");
