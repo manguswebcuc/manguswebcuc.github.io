@@ -18,7 +18,7 @@
     }
 
     option {
-      text-transform: uppercase;
+      text-transform: uppercase;      
     }
 
     div {
@@ -404,149 +404,162 @@
           <input type="radio" name="VIVIENDA" id="VIVIENDA_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input">
-          <label for="NOMBRE_PADRE">22.NOMBRE DE SU PADRE O MADRE:</label><input id="NOMBRE_PADRE" name="NOMBRE_PADRE"
-            type="text" onchange="getField(this)" />
-        </div>
-        <div class="input">
-          <label for="CELULAR_P_M">23.CELULAR DEL PADRE O MADRE MENCIONADO ANTERIORMENTE:</label><input id="CELULAR_P_M"
-            name="CELULAR_P_M" type="number" maxlength="15" onchange="getField(this)" />
-        </div>
-        <div class="input">
-          <label for="EDUCATIVO_P_M">24.NIVEL EDUCATIVO DEL PADRE O MADRE MENCIONANDO
-            ANTERIORMENTE:</label><select name="EDUCATIVO_P_M" id="EDUCATIVO_P_M" onchange="getField(this)"
-            maxlength="80">
-            <option value="" disabled selected hidden></option>
-            <option value="Primaria">PRIMARIO</option>
-            <option value="Secundaria">SECUNDARIA</option>
-            <option value="Técnico-tecnólogo">TÉCNICO - TECNOLOGO</option>
-            <option value="Profesional Universitario">
-              PROFESIONAL UNIVERSITARIO
-            </option>
-            <option value="Posgrado">POSGRADO</option>
+          <label>22.  ¿Quién es su acudiente?</label>
+          <select name="info_acudiente" id="info_acudiente" required onchange="capturarInfoAcudiente(event.target.value); getField(this)">
+            <option value="" disabled selected hidden></option>   
+            <option value="1">Otra persona</option>
+            <option value="2">Padre/Madre</option>
+            <option value="3">Soy independiente</option>
           </select>
         </div>
-        <div class="input">
-          <label for="OCUPACION_P_M">25.OCUPACIÓN DEL PADRE O MADRE MENCIONADO ANTERIORMENTE:</label><select
-            name="OCUPACION_P_M" id="OCUPACION_P_M" onchange="getField(this)">
-            <option value="" disabled selected hidden></option>
-            <option value="Estudia">ESTUDIA</option>
-            <option value="Labora">LABORA</option>
-            <option value="Ama de casa">AMA DE CASA</option>
-            <option value="Pensionado">PENSIONADO</option>
-            <option value="Desempleado">DESEMPLEADO</option>
-            <option value="Independiente">INDEPENDIENTE</option>
-          </select>
-        </div>
-        <div class="input">
-          <label for="NOMBRE_ACUDIENTE">26.NOMBRES Y APELLIDOS DE SU ACUDIENTE:</label><input name="NOMBRE_ACUDIENTE"
-            id="NOMBRE_ACUDIENTE" onchange="getField(this)" maxlength="80" />
-        </div>
-        <div class="input">
-          <!-- nuevo campo -->
-          <label for="TDOCAcud">27.TIPO DE DOCUMENTO</label>
-          <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="TI" value="TI" />TARJETA DE
-          IDENTIDAD<br />
-          <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="CD" value="CD" />CEDULA<br />
-          <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="PA"
-            value="PA" />PASAPORTE<br />
-          <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="CD" value="CD" />CEDULA
-          EXTRANJERIA
-        </div>
-        <div class="input">
-          <label for="NumeroDocumentoAcudiente">28.ESCRIBE EL NÚMERO DE DOCUMENTO ACUDIENTE</label><input
-            id="NumeroDocumentoAcudiente" name="NumeroDocumentoAcudiente" type="number" maxlength="21"
-            onchange="getField(this)" />
-          <br>
-          <div class="contetn-text">
-            <span class="help-text test1">Por favor verifica este campo, es indispensable en tu proceso</span>
+        <section id="sec_info1">
+          <div class="input">
+            <label for="NOMBRE_PADRE">23.NOMBRE DE SU PADRE O MADRE:</label><input id="NOMBRE_PADRE" name="NOMBRE_PADRE"
+              type="text" onchange="getField(this)" />
           </div>
-        </div>
-        <div class="input">
-          <label for="emailForm">
-            29.Por favor confirme su correo electronico de su ACUDIENTE</label>
+          <div class="input">
+            <label for="CELULAR_P_M">24.CELULAR DEL PADRE O MADRE MENCIONADO ANTERIORMENTE:</label><input id="CELULAR_P_M"
+              name="CELULAR_P_M" type="number" maxlength="15" onchange="getField(this)" />
+          </div>
+          <div class="input">
+            <label for="EDUCATIVO_P_M">25.NIVEL EDUCATIVO DEL PADRE O MADRE MENCIONANDO
+              ANTERIORMENTE:</label><select name="EDUCATIVO_P_M" id="EDUCATIVO_P_M" onchange="getField(this)"
+              maxlength="80">
+              <option value="" disabled selected hidden></option>
+              <option value="Primaria">PRIMARIO</option>
+              <option value="Secundaria">SECUNDARIA</option>
+              <option value="Técnico-tecnólogo">TÉCNICO - TECNOLOGO</option>
+              <option value="Profesional Universitario">
+                PROFESIONAL UNIVERSITARIO
+              </option>
+              <option value="Posgrado">POSGRADO</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="OCUPACION_P_M">26.OCUPACIÓN DEL PADRE O MADRE MENCIONADO ANTERIORMENTE:</label><select
+              name="OCUPACION_P_M" id="OCUPACION_P_M" onchange="getField(this)">
+              <option value="" disabled selected hidden></option>
+              <option value="Estudia">ESTUDIA</option>
+              <option value="Labora">LABORA</option>
+              <option value="Ama de casa">AMA DE CASA</option>
+              <option value="Pensionado">PENSIONADO</option>
+              <option value="Desempleado">DESEMPLEADO</option>
+              <option value="Independiente">INDEPENDIENTE</option>
+            </select>
+          </div>
+        </section>
+        <section id="sec_info2">
+          <div class="input">
+            <label for="NOMBRE_ACUDIENTE">27.NOMBRES Y APELLIDOS DE SU ACUDIENTE:</label><input name="NOMBRE_ACUDIENTE"
+              id="NOMBRE_ACUDIENTE" onchange="getField(this)" maxlength="80" />
+          </div>
+          <div class="input">
+            <!-- nuevo campo -->
+            <label for="TDOCAcud">28.TIPO DE DOCUMENTO</label>
+            <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="NingunoI" value="TI" />TARJETA DE
+            IDENTIDAD<br />
+            <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="NingunoD" value="CD" />CEDULA<br />
+            <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="NingunoA"
+              value="PA" />PASAPORTE<br />
+            <input type="radio" onclick="getField(this)" type="checkbox" name="TDOCAcud" id="NingunoD" value="CD" />CEDULA
+            EXTRANJERIA
+          </div>
+          <div class="input">
+            <label for="NumeroDocumentoAcudiente">29.ESCRIBE EL NÚMERO DE DOCUMENTO ACUDIENTE</label><input
+              id="NumeroDocumentoAcudiente" name="NumeroDocumentoAcudiente" type="number" maxlength="21"
+              onchange="getField(this)" />
+            <br>
+            <div class="contetn-text">
+              <span class="help-text test1">Por favor verifica este campo, es indispensable en tu proceso</span>
+            </div>
+          </div>
+          <div class="input">
+            <label for="emailForm">
+              30.Por favor confirme su correo electronico de su ACUDIENTE</label>
 
-          <input class="input" onchange="varificarEmail(this)" type="text" name="emailFormAcudiente"
-            id="emailFormAcudiente" />
+            <input class="input" onchange="varificarEmail(this)" type="text" name="emailFormAcudiente"
+              id="emailFormAcudiente" />
 
-        </div>
+          </div>
 
-        <div class="input">
-          <label for="CELULAR_ACUDIENTE">30.CELULAR DEL ACUDIENTE:</label><input name="CELULAR_ACUDIENTE"
-            id="CELULAR_ACUDIENTE" onchange="getField(this)" maxlength="15" type="number" />
-        </div>
-        <div class="input">
-          <label for="EDUCATIVO_A">31.NIVEL EDUCATIVO DEL ACUDIENTE MENCIONADO</label><select name="EDUCATIVO_A"
-            id="EDUCATIVO_A" onchange="getField(this)" maxlength="80">
-            <option value="" disabled selected hidden></option>
-            <option value="Primaria">PRIMARIO</option>
-            <option value="Secundaria">SECUNDARIA</option>
-            <option value="Técnico-tecnólogo">TÉCNICO - TECNOLOGO</option>
-            <option value="Profesional Universitario">
-              PROFESIONAL UNIVERSITARIO
-            </option>
-            <option value="Posgrado">POSGRADO</option>
-          </select>
-        </div>
-        <div class="input">
-          <label for="OCUPACION_P_M">32.OCUPACIÓN DEL ACUDIENTE</label><select name="OCUPACION_AC" id="OCUPACION_AC"
-            onchange="getField(this)" maxlength="80">
-            <option value="" disabled selected hidden></option>
-            <option value="Estudia">ESTUDIA</option>
-            <option value="Labora">LABORA</option>
-            <option value="Ama de casa">AMA DE CASA</option>
-            <option value="Pensionado">PENSIONADO</option>
-            <option value="Desempleado">DESEMPLEADO</option>
-            <option value="Independiente">INDEPENDIENTE</option>
-          </select>
-        </div>
-        <div class="input">
-          <label for="PARENTESCO_ACUDIENTE:">33.PARENTESCO DEL ACUDIENTE:</label><select name="PARENTESCO_ACUDIENTE"
-            id="PARENTESCO_ACUDIENTE" onchange="getField(this)" maxlength="80">
-            <option value="" disabled selected hidden></option>
-            <option value="PADRE/MADRE">PADRE/MADRE</option>
-            <option value="HERMANO/A">HERMANO/A</option>
-            <option value="PRIMO/A">PRIMO/A</option>
-            <option value="TIO/A">TIO/A</option>
-            <option value="ABUELO/A">ABUELO/A</option>
-            <option value="AMIGO/A">AMIGO/A</option>
-            <option value="PAREJA">PAREJA</option>
-            <option value="Otras">OTROS</option>
-          </select>
-        </div>
-        <div class="input ">
-          <input onchange="getField(this)" id="PARENTESCO_ACUDIENTEF" maxlength="80" name="PARENTESCO_ACUDIENTE"
-            type="text" hidden />
-        </div>
+          <div class="input">
+            <label for="CELULAR_ACUDIENTE">31.CELULAR DEL ACUDIENTE:</label><input name="CELULAR_ACUDIENTE"
+              id="CELULAR_ACUDIENTE" onchange="getField(this)" maxlength="15" type="number" />
+          </div>
+          <div class="input">
+            <label for="EDUCATIVO_A">32.NIVEL EDUCATIVO DEL ACUDIENTE MENCIONADO</label><select name="EDUCATIVO_A"
+              id="EDUCATIVO_A" onchange="getField(this)" maxlength="80">
+              <option value="" disabled selected hidden></option>
+              <option value="Primaria">PRIMARIO</option>
+              <option value="Secundaria">SECUNDARIA</option>
+              <option value="Técnico-tecnólogo">TÉCNICO - TECNOLOGO</option>
+              <option value="Profesional Universitario">
+                PROFESIONAL UNIVERSITARIO
+              </option>
+              <option value="Posgrado">POSGRADO</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="OCUPACION_P_M">33.OCUPACIÓN DEL ACUDIENTE</label><select name="OCUPACION_AC" id="OCUPACION_AC"
+              onchange="getField(this)" maxlength="80">
+              <option value="" disabled selected hidden></option>
+              <option value="Estudia">ESTUDIA</option>
+              <option value="Labora">LABORA</option>
+              <option value="Ama de casa">AMA DE CASA</option>
+              <option value="Pensionado">PENSIONADO</option>
+              <option value="Desempleado">DESEMPLEADO</option>
+              <option value="Independiente">INDEPENDIENTE</option>
+            </select>
+          </div>
+          <div class="input parentesco">
+            <label for="PARENTESCO_ACUDIENTE:">34.PARENTESCO DEL ACUDIENTE:</label><select name="PARENTESCO_ACUDIENTE"
+              id="PARENTESCO_ACUDIENTE" onchange="getField(this)" maxlength="80">
+              <option value="" disabled selected hidden></option>
+              <option value="PADRE/MADRE">PADRE/MADRE</option>
+              <option value="HERMANO/A">HERMANO/A</option>
+              <option value="PRIMO/A">PRIMO/A</option>
+              <option value="TIO/A">TIO/A</option>
+              <option value="ABUELO/A">ABUELO/A</option>
+              <option value="AMIGO/A">AMIGO/A</option>
+              <option value="PAREJA">PAREJA</option>
+              <option value="Otras">OTROS</option>
+            </select>
+          </div>
+          <div class="input ">
+            <input onchange="getField(this)" id="PARENTESCO_ACUDIENTEF" maxlength="80" name="PARENTESCO_ACUDIENTE"
+              type="text" hidden />
+          </div>
+        </section>
       </section>
       <section class="sectionForm sec3" id="sec3" hidden>
         <h2>CONDICIONES DE ESTUDIO</h2>
         <div class="input">
-          <label for="BECA">34.¿ESTUDIARÁ USTED CON BECA Y/O CRÉDITO?</label><input type="radio" name="BECA"
+          <label for="BECA">35.¿ESTUDIARÁ USTED CON BECA Y/O CRÉDITO?</label><input type="radio" name="BECA"
             id="BECA_SI" onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="BECA" id="BECA_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input BECADependiente">
-          <label for="NOMBRE_B_C">35.¿CUÁL BECA O CRÉDITO?</label><input id="NOMBRE_B_C" name="NOMBRE_B_C" type="text"
+          <label for="NOMBRE_B_C">36.¿CUÁL BECA O CRÉDITO?</label><input id="NOMBRE_B_C" name="NOMBRE_B_C" type="text"
             onchange="getField(this)" />
         </div>
         <div class="input">
-          <label for="COMPUTADOR">36.¿USTED POSEE COMPUTADOR?</label><input type="radio" name="COMPUTADOR"
+          <label for="COMPUTADOR">37.¿USTED POSEE COMPUTADOR?</label><input type="radio" name="COMPUTADOR"
             id="COMPUTADOR_SI" onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="COMPUTADOR" id="COMPUTADOR_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input">
-          <label for="CELULAR_INTELIGENTE">37.¿USTED POSEE CELULAR INTELIGENTE?</label><input type="radio"
+          <label for="CELULAR_INTELIGENTE">38.¿USTED POSEE CELULAR INTELIGENTE?</label><input type="radio"
             name="CELULAR_INTELIGENTE" id="CELULAR_INTELIGENTE_SI" onchange="getField(this)" value="Si" />Si<br />
           <input type="radio" name="CELULAR_INTELIGENTE" id="CELULAR_INTELIGENTE_No" onchange="getField(this)"
             value="No" />No
         </div>
         <div class="input">
-          <label for="ACCESO_INTERNET">38.¿USTED TIENE ACCESO A INTERNET EN SU VIVIENDA?</label><input type="radio"
+          <label for="ACCESO_INTERNET">39.¿USTED TIENE ACCESO A INTERNET EN SU VIVIENDA?</label><input type="radio"
             name="ACCESO_INTERNET" id="ACCESO_INTERNET_SI" onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="ACCESO_INTERNET" id="ACCESO_INTERNET_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input">
-          <label for="PLAN_DATOS">39.¿USTED TIENE PLAN DE DATOS?</label><input type="radio" name="PLAN_DATOS"
+          <label for="PLAN_DATOS">40.¿USTED TIENE PLAN DE DATOS?</label><input type="radio" name="PLAN_DATOS"
             id="PLAN_DATOS_SI" onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="PLAN_DATOS" id="PLAN_DATOS_No" onchange="getField(this)" value="No" />No
           </select>
@@ -555,12 +568,12 @@
       <section class="sectionForm sec4" id="sec4" hidden>
         <h2>CONDICIONES DE SALUD</h2>
         <div class="input">
-          <label for="Eps">40.¿Posee EPS?</label><input type="radio" name="Eps_si" id="Eps_SI" onchange="getField(this)"
+          <label for="Eps">41.¿Posee EPS?</label><input type="radio" name="Eps_si" id="Eps_SI" onchange="getField(this)"
             value="Si" />Si<br />
           <input type="radio" name="Eps_si" id="Eps_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input Eps_siDependiente">
-          <label for="Eps">41.¿CUÁL ES SU EPS?</label><select name="Eps" id="Eps" onchange="getField(this)"
+          <label for="Eps">42.¿CUÁL ES SU EPS?</label><select name="Eps" id="Eps" onchange="getField(this)"
             maxlength="80">
             <option value="" disabled selected hidden></option>
             <option value="Cajacopi Eps">Cajacopi Eps</option>
@@ -600,64 +613,64 @@
           <input onchange="getField(this)" id="EpsF" maxlength="80" name="Eps" type="text" hidden />
         </div>
         <div class="input">
-          <label for="EMBARAZO">42.¿ESTÁ USTED EN CONDICIÓN DE EMBARAZO?</label><input type="radio" name="EMBARAZO_SI"
+          <label for="EMBARAZO">43.¿ESTÁ USTED EN CONDICIÓN DE EMBARAZO?</label><input type="radio" name="EMBARAZO_SI"
             id="EMBARAZO_SI" onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="EMBARAZO_SI" id="EMBARAZO_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input">
-          <label for="LENTES_RECETADOS">43.¿USTED USA LENTES RECETADOS?</label><input type="radio"
+          <label for="LENTES_RECETADOS">44.¿USTED USA LENTES RECETADOS?</label><input type="radio"
             name="LENTES_RECETADOS" id="LENTES_RECETADOS_SI" onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="LENTES_RECETADOS" id="LENTES_RECETADOS_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input LENTES_RECETADOSDependiente">
-          <label for="USO_LENTES">44.¿MOTIVO DEL USO DE LENTES?</label><input id="USO_LENTES" maxlength="40"
+          <label for="USO_LENTES">45.¿MOTIVO DEL USO DE LENTES?</label><input id="USO_LENTES" maxlength="40"
             name="USO_LENTES" size="20" type="text" onchange="getField(this)" />
         </div>
         <div class="input">
-          <label for="DIAGNOSTICO_MEDICO_ESPECIAL">45.¿USTED TIENE ALGÚN DIAGNOSTICO MÉDICO DE ENFERMAD QUE REQUIERA
+          <label for="DIAGNOSTICO_MEDICO_ESPECIAL">46.¿USTED TIENE ALGÚN DIAGNOSTICO MÉDICO DE ENFERMAD QUE REQUIERA
             CUIDADO ESPECIAL?</label><input type="radio" name="DIAGNOSTICO_MEDICO_ESPECIAL"
             id="DIAGNOSTICO_MEDICO_ESPECIAL_SI" onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="DIAGNOSTICO_MEDICO_ESPECIAL" id="DIAGNOSTICO_MEDICO_ESPECIAL_NO"
             onchange="getField(this)" value="No" />No
         </div>
         <div class="input DIAGNOSTICO_MEDICO_ESPECIALDependiente">
-          <label for="DIAGNOSTICO">46.¿CUÁL DIAGNOSTICO MÉDICO? </label><input id="DIAGNOSTICO" maxlength="40"
+          <label for="DIAGNOSTICO">47.¿CUÁL DIAGNOSTICO MÉDICO? </label><input id="DIAGNOSTICO" maxlength="40"
             name="DIAGNOSTICO" size="20" type="text" onchange="getField(this)" />
         </div>
       </section>
       <section class="sectionForm sec5" id="sec5" hidden>
         <h2>INFORMACIÓN LABORAL</h2>
         <div class="input">
-          <label for="TRABAJA">47.¿TRABAJA MIENTRAS ESTUDIA?</label><input type="radio" name="TRABAJA" id="TRABAJA_SI"
+          <label for="TRABAJA">48.¿TRABAJA MIENTRAS ESTUDIA?</label><input type="radio" name="TRABAJA" id="TRABAJA_SI"
             onchange="getField(this)" value="Sí" />Si<br />
           <input type="radio" name="TRABAJA" id="TRABAJA_No" onchange="getField(this)" value="No" />No
         </div>
         <div class="input TRABAJADependiente">
-          <label for="NOMBRE_EMPRESA">48.NOMBRE DE LA EMPRESA DONDE TRABAJA:</label><input id="NOMBRE_EMPRESA"
+          <label for="NOMBRE_EMPRESA">49.NOMBRE DE LA EMPRESA DONDE TRABAJA:</label><input id="NOMBRE_EMPRESA"
             name="NOMBRE_EMPRESA" type="text" onchange="getField(this)" />
         </div>
         <div class="input TRABAJADependiente">
-          <label for="CARGO_ACTUAL">46.CARGO ACTUAL:</label>
+          <label for="CARGO_ACTUAL">50.CARGO ACTUAL:</label>
           <input id="CARGO_ACTUAL" name="CARGO_ACTUAL" type="text" onchange="getField(this)" />
         </div>
         <div class="input TRABAJADependiente">
-          <label for="DIRECCIÓN_EMPRESA">49.DIRECCIÓN DE LA EMPRESA DONDE TRABAJA:</label><input id="DIRECCIÓN_EMPRESA"
+          <label for="DIRECCIÓN_EMPRESA">51.DIRECCIÓN DE LA EMPRESA DONDE TRABAJA:</label><input id="DIRECCIÓN_EMPRESA"
             name="DIRECCIÓN_EMPRESA" type="text" onchange="getField(this)" />
         </div>
         <div class="input TRABAJADependiente">
-          <label for="TELEFONO_EMPRESA ">50.TELEFONO DE LA EMPRESA DONDE TRABAJA:</label><input id="TELEFONO_EMPRESA"
+          <label for="TELEFONO_EMPRESA ">52.TELEFONO DE LA EMPRESA DONDE TRABAJA:</label><input id="TELEFONO_EMPRESA"
             maxlength="40" name="TELEFONO_EMPRESA" size="20" type="text" onchange="getField(this)" />
         </div>
         <div class="input">
           <label for="emailForm">
-            51.Por favor confirme su correo electronico</label>
+            53.Por favor confirme su correo electronico</label>
 
           <input class="input" onchange="varificarEmail(this)" type="text" name="emailForm" id="emailForm" />
 
         </div>
         <div class="input">
           <label for="ley">
-            52.Declaro y acepto que conozco el reglamento estudiantil de la
+            54.Declaro y acepto que conozco el reglamento estudiantil de la
             universidad de la Costa (ACUERDO No. 1618 30 DE NOVIEMBRE DE 2020,
             ART.37), donde se establece que, si en el proceso de admisión se
             identifica que obtuve en la prueba saber 11 un puntaje por debajo
@@ -692,6 +705,28 @@
     </form>
   </div>
   <script>
+
+    var info_fam = 0;
+    
+    function capturarInfoAcudiente (event) {
+      if(event == 1){
+        console.log(1);
+        document.getElementById("sec_info1").removeAttribute("hidden");
+        document.getElementById("sec_info2").removeAttribute("hidden");
+        document.querySelector('.parentesco').removeAttribute('hidden');      
+        info_fam = 1;
+      }else if(event == 2){
+        document.getElementById("sec_info1").setAttribute("hidden" , true);
+        document.getElementById("sec_info2").removeAttribute("hidden");
+        document.querySelector('.parentesco').setAttribute('hidden',true);      
+        info_fam = 2;
+      }else if(event == 3){
+        document.getElementById("sec_info1").setAttribute("hidden" , true);
+        document.getElementById("sec_info2").setAttribute("hidden" , true);
+        info_fam = 3;       
+      }
+    }
+
     let dataForm = { "ley": "No", "email": "", "TRABAJA": "", "emailForm": "", "NumeroDocumento": "" };
     /*
     let dataForm = {
@@ -725,7 +760,7 @@
         "EDUCATIVO_P_M": "Secundaria",
         "OCUPACION_P_M": "Estudia",
         "NOMBRE_ACUDIENTE": "32131",
-        "TDOCAcud": "CD",
+        "TDOCAcud": "CDNinguno
         "NumeroDocumentoAcudiente": "2",
         "emailFormAcudiente": "gamil.eocm@test.es",
         "CELULAR_ACUDIENTE": "432423",
@@ -764,8 +799,28 @@
 
     /// Agregar valor de los campos en el mapa dataForm
     function getField(even) {
+      if(info_fam == 2){        
+        dataForm[document.getElementById("NOMBRE_PADRE").name] = document.getElementById("NOMBRE_ACUDIENTE").value;        
+        dataForm[document.getElementById("CELULAR_P_M").name] = document.getElementById("CELULAR_ACUDIENTE").value;
+        dataForm[document.getElementById("EDUCATIVO_P_M").name] = document.getElementById("EDUCATIVO_A").value;
+        dataForm[document.getElementById("OCUPACION_P_M").name] = document.getElementById("OCUPACION_AC").value;
+        dataForm[document.getElementById("PARENTESCO_ACUDIENTE").name] = "PADRE/MADRE";
+      }else if(info_fam == 3){
+        dataForm[document.getElementById("NOMBRE_PADRE").name] = "''";        
+        dataForm[document.getElementById("CELULAR_P_M").name] = "''";
+        dataForm[document.getElementById("EDUCATIVO_P_M").name] = "Ninguno";
+        dataForm[document.getElementById("OCUPACION_P_M").name] = "Ninguno";
+        dataForm[document.getElementById("NOMBRE_ACUDIENTE").name] = "''";        
+        dataForm[document.getElementById("CELULAR_ACUDIENTE").name] = "''";
+        dataForm[document.getElementById("EDUCATIVO_A").name] = "Ninguno";
+        dataForm[document.getElementById("OCUPACION_AC").name] = "Ninguno";
+        dataForm["TDOCAcud"] = "Ninguno";
+        dataForm[document.getElementById("NumeroDocumentoAcudiente").name] = "''";
+        dataForm[document.getElementById("emailFormAcudiente").name] = "ninguno@example.com";       
+        console.log(dataForm);
+      }
       dataForm[even.name] = even.value;
-      ///console.log(dataForm)
+      console.log(dataForm)
 
       document.getElementById("00N5G00000VwPla").click();
       document.getElementById("00N5G00000VwPla").value = JSON.stringify(dataForm);
@@ -991,7 +1046,7 @@
           dataForm[even.name] = even.value;
           habilitarBotones();
           onFocusF();
-          document.getElementById("00N3C000006CwdE").value = JSON.stringify(dataForm);
+          document.getElementById("00N5G00000VwPla").value = JSON.stringify(dataForm);
           return
         }
         dataForm[even.name] = even.value;
@@ -1006,7 +1061,7 @@
 
     function onFocusF() {
       dataForm.email = dataForm.emailForm;
-      document.getElementById("00N3C000006CwdE").value = JSON.stringify(dataForm);
+      document.getElementById("00N5G00000VwPla").value = JSON.stringify(dataForm);
       let submit = document.getElementById("submit");
       submit.hidden = false;
       document.getElementById("submit").addEventListener("click", (event) => {
@@ -1046,6 +1101,7 @@
         }
         console.log("field " + field + " sumas " + (42 + contador));
         if (field < (43 + contador)) {
+          console.log("FIELD " + field)
           alert("Es necesario llenar todos los campos para continuar")
           event.preventDefault()
 
@@ -1058,6 +1114,8 @@
 
 
         if (nDependientes == 1 && field < 40) {
+          console.log("FIELD " + field)
+          
           alert("Es necesario llenar todos los campos para continuar")
           event.preventDefault()
 
@@ -1070,7 +1128,7 @@
       if (page == 1) {
 
         if (field < 33) {
-
+          console.log("FIELD " + field)          
           alert("Es necesario llenar todos los campos para continuar")
           event.preventDefault()
 
@@ -1082,6 +1140,7 @@
       if (page == 0) {
 
         if (field < 14) {
+          console.log("FIELD " + field)          
           alert("Es necesario llenar todos los campos para continuar")
           event.preventDefault()
         } else {
