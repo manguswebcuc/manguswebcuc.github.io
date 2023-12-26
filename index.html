@@ -187,7 +187,7 @@
   </section>
   <div class="contentForm">
 
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Df4000002ZjRP"
       method="POST" class="styleForm">
 
       <input type=hidden name="orgid" value="00Df4000002ZjRP">
@@ -669,19 +669,39 @@
 
         </div>
         <div class="input">
-          <label for="ley">
-            54.Declaro y acepto que conozco el reglamento estudiantil de la
-            universidad de la Costa (ACUERDO No. 1618 30 DE NOVIEMBRE DE 2020,
-            ART.37), donde se establece que, si en el proceso de admisión se
-            identifica que obtuve en la prueba saber 11 un puntaje por debajo
-            de la media nacional (50 puntos) en las competencias de
-            razonamiento cuantitativo y/o Lectura crítica , debo realizar un
-            plan de acompañamiento académico según corresponda para poder ser
-            admitido y además cursarlo y aprobarlo en el primer semestre con
-            plazo máximo hasta el 2 semestre, o de lo contrario podría quedar
-            por fuera del programa que esté cursando.</label>
+          <label for="vgb">
+            54.En la Universidad de la Costa estamos comprometidos en la construcción de un campus seguro y libre de cualquier tipología de violencia basada en género (VBG).
 
-          <input class="leycheck" onclick="checkLey(this)" type="checkbox" name="ley" id="ley" value=false />
+            Revisa aquí nuestro violentometro y ruta de atención de VBG: <a href="https://bienestar.cuc.edu.co/violento-metro-y-ruta/" target="_blank">https://bienestar.cuc.edu.co/violento-metro-y-ruta/</a>
+            Por ese motivo te invitamos a sumarte a nuestra iniciativa.
+
+            ¿Aceptas este compromiso?
+
+          </label>
+          
+          <select name="COMPROMISO" id="COMPROMISO" onchange="getField(this)"
+            maxlength="80">
+            <option value="" disabled selected hidden></option>
+            <option value="SI">SI</option>
+            <option value="NO">NO</option>    
+          </select>
+
+        </div>
+        <div class="input">
+          <label for="ley">
+            55.Al diligenciar este formato usted otorga su autorización a UNIVERSIDAD DE LA COSTA - CUC para que utilice sus datos personales, 
+            con la única finalidad de prestarles a los usuarios una mejor atención contacto e información sobre nuestros productos, servicios, 
+            ofertas y promociones para mantener canales de comunicación, así como noticias relacionadas con el desarrollo de las actividades académicas 
+            en las cuales se utilizaran datos biométricos como (fotografías y videos). puede ejercitar los derechos de acceso, 
+            corrección, supresión, revocación o reclamo por infracción sobre sus datos, envíe un correo electrónico a la dirección <a>buzon@cuc.edu.co</a>,
+            o contáctenos en la página web <a href="https://www.cuc.edu.co" target="_blank">www.cuc.edu.co</a>, o a la Dirección Cll. 58 #55-66 - Barranquilla, Colombia. No transferimos sus datos 
+            personales a terceros sin su debida autorización , cumplimos con el principio de circulación restringida, necesidad y finalidad de la Ley 1581 de 2012 y su decreto 
+            reglamentario 1074 de 2015. Así mismo En cumplimiento de la Ley 1581 de 2012 y sus decretos reglamentarios en calidad de titular de la información de manera libre,
+            expresa e informada, autorizo a CORPORACIÓN UNIVERSIDAD DE LA COSTA - CUC, a recolectar, almacenar, utilizar, y en general, a usar mis datos personales para los fines 
+            que consideren pertinentes, Declaro que he conocido la Política de tratamiento de datos personales publicada en: <a href="https://www.cuc.edu.co/wp-content/uploads/normatividad/documentos-institucionales/13.%20POLITICA%20TRATAMIENTO%20DE%20DATOS%20PERSONALES%20-%20ACUERDO%20No.%201550.pdf?_t=1646063996" target="_blank">https://www.cuc.edu.co/wp-content/uploads/normatividad/documentos-institucionales/13.%20POLITICA%20TRATAMIENTO%20DE%20DATOS%20PERSONALES%20-%20ACUERDO%20No.%201550.pdf?_t=1646063996</a>
+          </label>
+
+          <input class="leycheck" onchange="checkLey(this)" type="checkbox" name="ley" id="ley" value="true"/>
           Si
         </div>
 
@@ -700,7 +720,7 @@
           Siguiente
         </button>
 
-        <input type="submit" name="submit" id="submit" hidden />
+        <input type="submit" name="submit" id="submit" />
       </div>
     </form>
   </div>
@@ -727,7 +747,7 @@
       }
     }
 
-    let dataForm = { "ley": "No", "email": "", "TRABAJA": "", "emailForm": "", "NumeroDocumento": "" };
+    let dataForm = { "ley": "Sí", "email": "", "TRABAJA": "", "emailForm": "", "NumeroDocumento": "" };
     /*
     let dataForm = {
         "ley": "No",
@@ -1023,11 +1043,13 @@
     }
     //Cambia el valor de la pregunta 49 
     function checkLey(eve) {
-
-      if (dataForm[eve.name] === 'No') {
+      console.log('check ' + eve.value);
+      if (eve.value == true) {
         dataForm[eve.name] = 'Sí';
+        console.log('pasa a SI ' + dataForm[eve.name] + ' eve ' + eve.name)
       } else {
         dataForm[eve.name] = 'No';
+        console.log('ENTRA AL NO ' + eve.value);
       }
 
     }
